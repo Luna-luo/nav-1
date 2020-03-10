@@ -21,6 +21,7 @@ a {
 img {
   max-width: 100%;
   max-height: 100%;
+  display: none;
 }
 
 /*style*/
@@ -54,12 +55,12 @@ body {
   padding: 0 10px;
   border: none;
   border: 1px solid #dddddd;
-  border-radius: 4px;
+  border-radius: 25px;
 }
 .searchForm > button {
   white-space: nowrap;
   padding: 0 28px;
-  border-radius: 4px;
+  border-radius: 25px;
   border: none;
   background: #164572;
   color: white;
@@ -104,7 +105,7 @@ body {
   align-items: center;
   background: white;
   border: 1px solid #dddddd;
-  border-radius: 4px;
+  border-radius: 80px;
   padding: 20px 0;
   position: relative;
   cursor: pointer; /*cha yixia*/
@@ -144,6 +145,7 @@ body {
   align-items: center;
   flex-direction: column;
   padding: 20px 0;
+  border-radius: 80px;
 }
 
 .siteList .addButton .icon {

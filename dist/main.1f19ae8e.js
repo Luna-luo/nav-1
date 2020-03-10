@@ -123,16 +123,20 @@ var $lastLi = $siteList.find("li.last");
 var x = localStorage.getItem("x");
 var xObject = JSON.parse(x);
 var hashMap = xObject || [{
-  logo: "A",
-  url: "https://www.acfun.cn"
+  logo: "G",
+  imagelogo: "/github-logo.7c6733fb.png",
+  url: "https://www.github.com"
 }, {
   logo: "B",
+  imagelogo: "/bilibili-logo.2ad423cb.png",
   url: "https://www.bilibili.com"
 }, {
   logo: "X",
+  imagelogo: "/xiedaimala-logo.cef6db52.png",
   url: "https://www.xiedaimala.com"
 }, {
   logo: "I",
+  imagelogo: "/iconfont-logo.3d388875.png",
   url: "https://www.iconfont.cn"
 }];
 
@@ -143,7 +147,7 @@ var simplifyUrl = function simplifyUrl(url) {
 var render = function render() {
   $siteList.find("li:not(.last)").remove();
   hashMap.forEach(function (node, index) {
-    var $li = $("<li>\n          <div class=\"site\">\n            <div class=\"logo\">".concat(node.logo, "</div>\n            <div class=\"link\">").concat(simplifyUrl(node.url), "</div>\n            <div class=\"close\">\n              <svg class=\"icon\" >\n                <use xlink:href=\"#icon-close\"></use>\n               </svg>\n            </div>\n          </div>\n      </li>")).insertBefore($lastLi);
+    var $li = $("<li>\n          <div class=\"site\">\n            <div class=\"logo\">\n              <div class=\"letter\">".concat(node.logo, "</div>\n              <img src=").concat(node.imagelogo, " alt=\"\" class=\"image-logo\" />\n            </div>\n            <div class=\"link\">").concat(simplifyUrl(node.url), "</div>\n            <div class=\"close\">\n              <svg class=\"icon\" >\n                <use xlink:href=\"#icon-close\"></use>\n               </svg>\n            </div>\n          </div>\n      </li>")).insertBefore($lastLi);
     $li.on("click", function () {
       window.open(node.url, "_self");
     });
@@ -186,6 +190,16 @@ $(document).on("keypress", function (e) {
     }
   }
 });
+$(document).ready(function () {
+  $(".site").mouseover(function () {
+    $(".site .image-logo").show();
+    $(".site .letter").hide();
+  });
+  $(".site").mouseout(function () {
+    $(".site .image-logo").hide();
+    $(".site .letter").show();
+  });
+});
 },{}],"../../../.config/yarn/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -214,7 +228,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59375" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56807" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

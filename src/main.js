@@ -3,10 +3,26 @@ const $lastLi = $siteList.find("li.last");
 const x = localStorage.getItem("x");
 const xObject = JSON.parse(x);
 const hashMap = xObject || [
-  { logo: "A", url: "https://www.acfun.cn" },
-  { logo: "B", url: "https://www.bilibili.com" },
-  { logo: "X", url: "https://www.xiedaimala.com" },
-  { logo: "I", url: "https://www.iconfont.cn" }
+  {
+    logo: "G",
+    imagelogo: "/github-logo.7c6733fb.png",
+    url: "https://www.github.com"
+  },
+  {
+    logo: "B",
+    imagelogo: "/bilibili-logo.2ad423cb.png",
+    url: "https://www.bilibili.com"
+  },
+  {
+    logo: "X",
+    imagelogo: "/xiedaimala-logo.cef6db52.png",
+    url: "https://www.xiedaimala.com"
+  },
+  {
+    logo: "I",
+    imagelogo: "/iconfont-logo.3d388875.png",
+    url: "https://www.iconfont.cn"
+  }
 ];
 
 const simplifyUrl = url => {
@@ -22,7 +38,10 @@ const render = () => {
   hashMap.forEach((node, index) => {
     const $li = $(`<li>
           <div class="site">
-            <div class="logo">${node.logo}</div>
+            <div class="logo">
+              <div class="letter">${node.logo}</div>
+              <img src=${node.imagelogo} alt="" class="image-logo" />
+            </div>
             <div class="link">${simplifyUrl(node.url)}</div>
             <div class="close">
               <svg class="icon" >
@@ -66,4 +85,15 @@ $(document).on("keypress", e => {
       window.open(hashMap[i].url);
     }
   }
+});
+
+$(document).ready(function() {
+  $(".site").mouseover(function() {
+    $(".site .image-logo").show();
+    $(".site .letter").hide();
+  });
+  $(".site").mouseout(function() {
+    $(".site .image-logo").hide();
+    $(".site .letter").show();
+  });
 });
