@@ -128,6 +128,9 @@ var hashMap = xObject || [{
 }, {
   logo: "B",
   url: "https://www.bilibili.com"
+}, {
+  logo: "X",
+  url: "https://www.xiedaimala.com"
 }];
 
 var simplifyUrl = function simplifyUrl(url) {
