@@ -5,22 +5,22 @@ const xObject = JSON.parse(x);
 const hashMap = xObject || [
   {
     logo: "G",
-    imagelogo: "/github-logo.7c6733fb.png",
+    imagelogo: "./images/github-logo.7c6733fb.png",
     url: "https://www.github.com"
   },
   {
     logo: "B",
-    imagelogo: "/bilibili-logo.2ad423cb.png",
+    imagelogo: "./images/bilibili-logo.2ad423cb.png",
     url: "https://www.bilibili.com"
   },
   {
     logo: "X",
-    imagelogo: "/xiedaimala-logo.cef6db52.png",
+    imagelogo: "./images/xiedaimala-logo.cef6db52.png",
     url: "https://www.xiedaimala.com"
   },
   {
     logo: "I",
-    imagelogo: "/iconfont-logo.3d388875.png",
+    imagelogo: "./images/iconfont-logo.3d388875.png",
     url: "https://www.iconfont.cn"
   }
 ];
