@@ -124,19 +124,19 @@ var x = localStorage.getItem("x");
 var xObject = JSON.parse(x);
 var hashMap = xObject || [{
   logo: "G",
-  imagelogo: "./images/github-logo.7c6733fb.png",
+  imagelogo: "https://i.loli.net/2020/03/11/WyVu61pztbKjTri.png",
   url: "https://www.github.com"
 }, {
   logo: "B",
-  imagelogo: "./images/bilibili-logo.2ad423cb.png",
+  imagelogo: "https://i.loli.net/2020/03/11/wBdWfu3eGMHRKTy.png",
   url: "https://www.bilibili.com"
 }, {
   logo: "X",
-  imagelogo: "./images/xiedaimala-logo.cef6db52.png",
+  imagelogo: "https://i.loli.net/2020/03/11/7YdtgcC4eJNwAmv.png",
   url: "https://www.xiedaimala.com"
 }, {
   logo: "I",
-  imagelogo: "./images/iconfont-logo.3d388875.png",
+  imagelogo: "https://i.loli.net/2020/03/11/p6MKoCLzklG3r5y.png",
   url: "https://www.iconfont.cn"
 }];
 
